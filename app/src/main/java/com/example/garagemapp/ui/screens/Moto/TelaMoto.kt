@@ -16,25 +16,21 @@ import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
 
 @Composable
 fun TelaMoto(drawerState: DrawerState) {
-
     Scaffold(
-        topBar = {
-            PlannerTopBar(drawerState)
-        },
-        content = { iPad ->
-            iPad
+        topBar = { PlannerTopBar(drawerState) },
+        content = {
             Column(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(30.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Motocas",
-                    Modifier.padding(30.dp),
+                    text = "Tela de Motos", // Texto mais descritivo
                     fontSize = 40.sp
                 )
             }
         }
     )
 }
-

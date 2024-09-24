@@ -16,21 +16,18 @@ import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
 
 @Composable
 fun TelaBarco(drawerState: DrawerState) {
-
     Scaffold(
-        topBar = {
-            PlannerTopBar(drawerState)
-        },
-        content = { iPad ->
-            iPad
+        topBar = { PlannerTopBar(drawerState) },
+        content = {
             Column(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(30.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Navio",
-                    Modifier.padding(30.dp),
+                    text = "Tela de Barcos", // Alterado para um título mais descritivo
                     fontSize = 40.sp
                 )
             }
