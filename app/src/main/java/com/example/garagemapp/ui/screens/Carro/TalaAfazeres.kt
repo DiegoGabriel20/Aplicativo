@@ -1,5 +1,6 @@
 package br.edu.up.Garagem.ui.screens.Carro
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -18,6 +19,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -26,6 +28,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
 import br.edu.up.Garagem.ui.screens.util.TelaUmBottomBar
+import com.example.garagemapp.R
 
 object TarefasRota {
     val TELA_LISTAR_AFAZERES_ROTA = "listar_afazeres"
@@ -63,14 +66,13 @@ fun TelaAfazeres(
                 startDestination = TarefasRota.TELA_LISTAR_AFAZERES_ROTA)
             {
                 composable(TarefasRota.TELA_LISTAR_AFAZERES_ROTA) {
-                    TelaListagemAfazeres(afazeres)
+                    TelaListagemCarros(afazeres)
                 }
                 composable(TarefasRota.TELA_INCLUIR_AFAZER_ROTA) {
                     Column(modifier = Modifier.fillMaxSize()) {
                         Spacer(modifier = Modifier.height(200.dp))
                         Text(text = "TELA DE INCLUIR AFAZER")
                     }
-
                 }
             }
 
@@ -82,7 +84,7 @@ fun TelaAfazeres(
 }
 
 @Composable
-private fun TelaListagemAfazeres(afazeres: MutableList<Afazer>) {
+private fun TelaListagemCarros(afazeres: MutableList<Afazer>) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

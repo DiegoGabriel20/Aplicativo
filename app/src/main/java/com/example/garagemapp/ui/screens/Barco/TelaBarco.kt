@@ -1,5 +1,6 @@
 package br.edu.up.Garagem.ui.screens.Barco
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,9 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
+import com.example.garagemapp.R
 
 @Composable
 fun TelaBarco(drawerState: DrawerState) {
@@ -34,6 +37,20 @@ fun TelaBarco(drawerState: DrawerState) {
                     fontSize = 40.sp
                 )
             }
+
+            Image(
+                painter = painterResource(id = R.drawable.barco2),
+                contentDescription = "Imagem de um Barco",
+                modifier = Modifier.padding(30.dp)
+
+            )
+
+            Image(
+                painter = painterResource(id = R.drawable.barco1),
+                contentDescription = "Imagem de um Barco",
+                modifier = Modifier.padding(30.dp)
+
+            )
         }
     )
 }

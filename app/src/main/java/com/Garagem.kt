@@ -1,5 +1,6 @@
 package br.edu.up.Garagem
 
+import TelaMoto
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -31,7 +32,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import br.edu.up.Garagem.ui.screens.Moto.TelaMoto
+
 import br.edu.up.Garagem.ui.screens.Barco.TelaBarco
 import br.edu.up.Garagem.ui.screens.Carro.TarefasNavHost
 import com.example.garagemapp.R
