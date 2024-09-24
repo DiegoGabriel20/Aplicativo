@@ -1,0 +1,1 @@
+"Gerencie facilmente sua garagem com nosso aplicativo de Gerenciamento de Garagem. Controle e organize informações sobre seus veículos, como carros, motos e barcos, em uma interface simples e intuitiva. Navegue entre as categorias, visualize detalhes e mantenha tudo acessível em um só lugar. Ideal para quem busca praticidade na administração de sua frota pessoal!"
