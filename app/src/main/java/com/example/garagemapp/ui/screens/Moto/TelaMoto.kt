@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,6 +17,7 @@ import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
 
 import com.example.garagemapp.R
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun TelaMoto(drawerState: DrawerState) {
     Scaffold(
@@ -28,9 +30,9 @@ fun TelaMoto(drawerState: DrawerState) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                // Texto existente
+
                 Text(
-                    text = "Tela de Motos", // Texto mais descritivo
+                    text = "Tela de Motos",
                     fontSize = 40.sp
                 )
 
@@ -41,10 +43,20 @@ fun TelaMoto(drawerState: DrawerState) {
                     modifier = Modifier.padding(30.dp)
 
                 )
+                Text(
+                    text = "Honda CG 250",
+                    fontSize = 40.sp
+                )
+
                 Image(
                     painter = painterResource(id = R.drawable.moto2),
                     contentDescription = "Imagem de uma moto",
                     modifier = Modifier.padding(30.dp)
+
+                )
+                Text(
+                    text = "Kawasaki Ninja",
+                    fontSize = 40.sp
                 )
             }
 

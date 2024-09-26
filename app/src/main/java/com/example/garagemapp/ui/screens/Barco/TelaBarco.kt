@@ -1,5 +1,6 @@
 package br.edu.up.Garagem.ui.screens.Barco
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
 import com.example.garagemapp.R
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun TelaBarco(drawerState: DrawerState) {
     Scaffold(

@@ -29,7 +29,7 @@ fun TelaUmBottomBar(navController: NavController) {
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = currentBackStackEntry?.destination?.route
 
-    NavigationBar(containerColor = Color(0xFF1A778A)) {
+    NavigationBar(containerColor = Color(0xFF19697B)) {
         NavigationBarItem(
             selected = currentRoute == TelaUm.TELA_AFAZERES_ROUTE,
             onClick = {
