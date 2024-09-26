@@ -21,21 +21,18 @@ fun TelaRotina(
     drawerState: DrawerState,
     navCtrlBottomNav: NavController
 ) {
-
     Scaffold(
-        topBar = {
-            PlannerTopBar(drawerState)
-        },
-        content = { iPad ->
-            iPad
+        topBar = { PlannerTopBar(drawerState) },
+        content = {
             Column(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(30.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Motos",
-                    Modifier.padding(30.dp),
+                    text = "Tela de Carros", // Altere conforme necessário
                     fontSize = 40.sp
                 )
             }
