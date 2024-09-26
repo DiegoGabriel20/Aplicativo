@@ -21,7 +21,7 @@ fun TarefasNavHost(drawerState: DrawerState) {
         startDestination = TelaUm.TELA_AFAZERES_ROUTE
     ) {
         composable(TelaUm.TELA_AFAZERES_ROUTE) {
-            TelaAfazeres(drawerState, navCtrlBottonNav)
+            TelaCarro(drawerState, navCtrlBottonNav)
         }
         composable(TelaUm.TELA_ROTINA_ROUTE) {
             TelaRotina(drawerState, navCtrlBottonNav)

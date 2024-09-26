@@ -5,6 +5,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -17,48 +18,70 @@ import androidx.navigation.NavController
 import br.edu.up.Garagem.ui.screens.Carro.TelaUm
 
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.navigation.compose.currentBackStackEntryAsState
+
 @Composable
 fun TelaUmBottomBar(navController: NavController) {
-    NavigationBar(containerColor = Color(0xFF98D2FF)) {
+
+
+    val currentBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = currentBackStackEntry?.destination?.route
+
+    NavigationBar(containerColor = Color(0xFF1A778A)) {
         NavigationBarItem(
-            selected = true,
+            selected = currentRoute == TelaUm.TELA_AFAZERES_ROUTE,
             onClick = {
-                navController.navigate(TelaUm.TELA_AFAZERES_ROUTE)
+                if (currentRoute != TelaUm.TELA_AFAZERES_ROUTE) {
+                    navController.navigate(TelaUm.TELA_AFAZERES_ROUTE)
+                }
             },
             icon = {
                 Icon(
-                    imageVector = Icons.Default.CheckCircle,
+                    imageVector = Icons.Default.Menu,
                     contentDescription = "A",
                     modifier = Modifier.size(40.dp)
                 )
             },
-            label = { Text(text = "CARRO") }
+            label = { Text(text = "CARRO", color = Color.White)
+                }
         )
         NavigationBarItem(
-            selected = false,
+            selected = currentRoute == TelaUm.TELA_ROTINA_ROUTE,
             onClick = {
-                navController.navigate(TelaUm.TELA_ROTINA_ROUTE)
-            }, icon = {
+                if (currentRoute != TelaUm.TELA_ROTINA_ROUTE) {
+                    navController.navigate(TelaUm.TELA_ROTINA_ROUTE)
+                }
+            },
+            icon = {
                 Icon(
-                    imageVector = Icons.Default.DateRange,
+                    imageVector = Icons.Default.Menu,
                     contentDescription = "B",
                     modifier = Modifier.size(40.dp)
                 )
             },
-            label = { Text(text = "MOTO") }
+            label = { Text(text = "MOTO", color = Color.White)
+               }
+
         )
         NavigationBarItem(
-            selected = false,
+            selected = currentRoute == TelaUm.TELA_NOTAS_ROUTE,
             onClick = {
-                navController.navigate(TelaUm.TELA_NOTAS_ROUTE)
-            }, icon = {
+                if (currentRoute != TelaUm.TELA_NOTAS_ROUTE) {
+                    navController.navigate(TelaUm.TELA_NOTAS_ROUTE)
+                }
+            },
+            icon = {
                 Icon(
-                    imageVector = Icons.Default.Email,
+                    imageVector = Icons.Default.Menu,
                     contentDescription = "C",
                     modifier = Modifier.size(40.dp)
+
                 )
             },
-            label = { Text(text = "BARCO") }
+            label = { Text(text = "BARCO", color = Color.White)
+                }
         )
     }
 }

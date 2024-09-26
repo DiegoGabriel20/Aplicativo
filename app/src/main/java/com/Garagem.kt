@@ -99,7 +99,7 @@ private fun DrawerContent(
     Column(
         modifier = Modifier
             .width(300.dp)
-            .background(Color.White)
+            .background(Color.Cyan)
             .padding(30.dp)
             .fillMaxHeight()
     ) {
@@ -117,7 +117,7 @@ private fun DrawerContent(
             }) {
             Icon(
                 //imageVector = Icons.Default.Call,
-                painter = painterResource(id = R.drawable.checklist),
+                painter = painterResource(id = R.drawable.carroicon),
                 contentDescription = "c",
                 modifier = Modifier.size(40.dp),
                 tint = getColorTexto(ehRotaUm)
@@ -138,7 +138,7 @@ private fun DrawerContent(
             }) {
             Icon(
                 //imageVector = Icons.Default.Call,
-                painter = painterResource(id = R.drawable.checklist),
+                painter = painterResource(id = R.drawable.motoicon),
                 contentDescription = "c",
                 modifier = Modifier.size(40.dp),
                 tint = getColorTexto(ehRotaDois)
@@ -158,7 +158,7 @@ private fun DrawerContent(
             }) {
             Icon(
                 //imageVector = Icons.Default.Call,
-                painter = painterResource(id = R.drawable.checklist),
+                painter = painterResource(id = R.drawable.barcoicon2),
                 contentDescription = "c",
                 modifier = Modifier.size(40.dp),
                 tint = getColorTexto(ehRotaTres)
@@ -179,7 +179,7 @@ fun getColorMenu(estaSelecionada: Boolean): Color {
 
 fun getColorTexto(estaSelecionada: Boolean): Color {
     if (estaSelecionada){
-        return Color.Black
+        return Color.Blue
     } else {
         return Color.DarkGray
     }

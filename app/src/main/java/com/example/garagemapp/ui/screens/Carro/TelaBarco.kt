@@ -1,28 +1,26 @@
-package br.edu.up.Garagem.ui.screens.Barco
+package br.edu.up.Garagem.ui.screens.Carro
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.DrawerState
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
-import com.example.garagemapp.R
+import br.edu.up.Garagem.ui.screens.util.TelaUmBottomBar
 
 @Composable
-fun TelaBarco(drawerState: DrawerState) {
+fun TelaNotas(
+    drawerState: DrawerState,
+    navCtrlBottomNav: NavController
+) {
 
     Scaffold(
         topBar = {
@@ -36,19 +34,13 @@ fun TelaBarco(drawerState: DrawerState) {
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Navio",
+                    text = "Barco",
                     Modifier.padding(30.dp),
                     fontSize = 40.sp
                 )
             }
-
-            Image(
-                painter = painterResource(id = R.drawable.barco2),
-                contentDescription = "Imagem de um Barco",
-                modifier = Modifier.padding(30.dp)
-
-            )
-        }
+        },
+        bottomBar = { TelaUmBottomBar(navCtrlBottomNav) }
     )
 }
 

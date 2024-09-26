@@ -17,7 +17,7 @@ import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
 import br.edu.up.Garagem.ui.screens.util.TelaUmBottomBar
 
 @Composable
-fun TelaNotas(
+fun TelaCarro(
     drawerState: DrawerState,
     navCtrlBottomNav: NavController
 ) {
@@ -43,4 +43,7 @@ fun TelaNotas(
         bottomBar = { TelaUmBottomBar(navCtrlBottomNav) }
     )
 }
+
+
+
 
