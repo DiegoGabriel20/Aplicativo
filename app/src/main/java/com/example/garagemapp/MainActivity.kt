@@ -10,7 +10,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Garagem()
+            GaragemApp()
         }
+    }
+
+    private fun GaragemApp() {
     }
 }

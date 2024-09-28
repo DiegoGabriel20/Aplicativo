@@ -6,7 +6,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.DrawerState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,59 +20,55 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
-import br.edu.up.Garagem.ui.screens.util.PlannerTopBar
-import br.edu.up.Garagem.ui.screens.util.TelaUmBottomBar
 import com.example.garagemapp.R
 
+
 @Composable
-fun TelaNotas(
-    drawerState: DrawerState,
-    navCtrlBottomNav: NavController
-) {
+fun TelaMoto() {
     Scaffold(
         topBar = {
-            PlannerTopBar(drawerState)
         },
-        content = { iPad ->
-            iPad
+        content = { innerPadding ->
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 16.dp), // Margem lateral para centralizar melhor
+                    .padding(innerPadding)
+                    .padding(horizontal = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Top
             ) {
-                // Título "Meus Barcos"
                 Text(
-                    text = "Meus Barcos",
+                    text = "Minhas Motos",
                     modifier = Modifier.padding(top = 40.dp),
-                    fontSize = 60.sp,
+                    fontSize = 40.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF1A778A)
                 )
 
-                // Imagem do barco
                 Image(
-                    painter = painterResource(id = R.drawable.barcovoador),
-                    contentDescription = "Imagem de um barco",
+                    painter = painterResource(id = R.drawable.moto2),
+                    contentDescription = "Imagem de um moto",
                     modifier = Modifier
                         .size(250.dp)
                         .padding(top = 20.dp, bottom = 16.dp)
                 )
 
-
                 Text(
-                    text = "Holandês Voador",
+                    text = "Kawasaki Ninja",
                     fontSize = 30.sp,
                     fontWeight = FontWeight.Medium,
                     color = Color.DarkGray,
                     modifier = Modifier.padding(bottom = 20.dp)
                 )
+
+                // Exemplo de navegação ao clicar em um botão
+                // Adicione seu botão aqui, se necessário
+                /* Button(onClick = {
+                    navController.navigate("outra_tela")
+                }) {
+                    Text(text = "Ir para outra tela")
+                } */
             }
-        },
-        bottomBar = { TelaUmBottomBar(navCtrlBottomNav) }
+        }
     )
 }
-
-
