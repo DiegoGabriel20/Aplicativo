@@ -22,16 +22,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import com.example.garagemapp.R
 
-data class Carro(val nome: String, val ano: String, val kilometragem: String, val imageResId: Int)
+data class Barco(val nome: String, val ano: String, val kilometragem: String, val imageResId: Int)
 
-val carros = listOf(
-    Carro("Toyota Supra", "1998", "125.850", R.drawable.carro2),
-    Carro("Honda Civic", "2020", "30.000", R.drawable.civic), // Troque pelo recurso correto da imagem
-    Carro("VolksWagen Golf", "2008", "40.000", R.drawable.golf)  // Troque pelo recurso correto da imagem
+val barcos = listOf(
+    Barco("Holandês Voador", "1698", "200.880", R.drawable.barcovoador),
+    Barco("Barco Pirata", "1700", "150.500", R.drawable.barco1), // Troque pelo recurso correto da imagem
+    Barco("Barco de Passeio", "1750", "300.000", R.drawable.barco2)  // Troque pelo recurso correto da imagem
 )
 
 @Composable
-fun TelaCarro() {
+fun TelaBarco() {
     Scaffold(
         content = { innerPadding ->
             LazyColumn(
@@ -42,7 +42,7 @@ fun TelaCarro() {
             ) {
                 item {
                     Text(
-                        text = "Meus Carros",
+                        text = "Meus Barcos",
                         modifier = Modifier.padding(top = 40.dp),
                         fontSize = 40.sp,
                         fontWeight = FontWeight.Bold,
@@ -50,12 +50,12 @@ fun TelaCarro() {
                     )
                 }
 
-                items(carros) { carro ->
-                    CarroCard(
-                        nome = carro.nome,
-                        ano = carro.ano,
-                        kilometragem = carro.kilometragem,
-                        imageResId = carro.imageResId
+                items(barcos) { barco ->
+                    BarcoCard(
+                        nome = barco.nome,
+                        ano = barco.ano,
+                        kilometragem = barco.kilometragem,
+                        imageResId = barco.imageResId
                     )
                 }
             }
@@ -64,7 +64,7 @@ fun TelaCarro() {
 }
 
 @Composable
-fun CarroCard(nome: String, ano: String, kilometragem: String, imageResId: Int) {
+fun BarcoCard(nome: String, ano: String, kilometragem: String, imageResId: Int) {
     Card(
         modifier = Modifier
             .padding(bottom = 20.dp)
@@ -80,7 +80,7 @@ fun CarroCard(nome: String, ano: String, kilometragem: String, imageResId: Int) 
         ) {
             Image(
                 painter = painterResource(id = imageResId),
-                contentDescription = "Imagem de um carro",
+                contentDescription = "Imagem de um barco",
                 modifier = Modifier
                     .size(200.dp)
                     .padding(bottom = 8.dp)
@@ -101,7 +101,7 @@ fun CarroCard(nome: String, ano: String, kilometragem: String, imageResId: Int) 
                     imageVector = Icons.Filled.Delete,
                     contentDescription = "Deletar",
                     modifier = Modifier
-                        .clickable { /* Ação para deletar o carro */ }
+                        .clickable { /* Ação para deletar o barco */ }
                         .padding(start = 8.dp)
                         .size(50.dp)
                 )
